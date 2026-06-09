@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Jane Smith — Digital Humanities & Computer Science</title>
+  <meta name="description" content="Academic portfolio of Dr. Jane Smith, scholar of Digital Humanities and Computer Science at Morningside University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" defer></script>
+  <script src="sketches/hero.js" defer></script>
+  <script src="sketches/cards.js" defer></script>
+  <script src="sketches/contact.js" defer></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">JS</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" aria-label="Introduction">
+    <div id="hero-canvas-container" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Morningside University</p>
+      <h1 class="hero-name">Dr. Jane Smith</h1>
+      <p class="hero-title">Digital Humanities &amp; Computer Science</p>
+      <p class="hero-tagline">Where stories meet systems, and texts become data.</p>
+      <div class="hero-cta">
+        <a href="#teaching" class="btn btn-primary">Teaching</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2 class="section-heading">About</h2>
+          <p class="about-bio">
+            I'm a scholar working at the intersection of literary studies, cultural history, and computational methods. My work asks what happens when we bring the tools of computer science — network analysis, machine learning, text mining — to bear on the humanistic questions we've always cared most about.
+          </p>
+          <p class="about-bio">
+            At Morningside University I teach courses in both the CS and English departments, and I'm endlessly interested in building bridges between them. I believe that learning to code is a humanistic act, and that close reading is a form of debugging.
+          </p>
+          <div class="interest-chips" aria-label="Research interests">
+            <span class="chip">Text Analysis</span>
+            <span class="chip">Digital Archives</span>
+            <span class="chip">Network Analysis</span>
+            <span class="chip">Computational Criticism</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Cultural Analytics</span>
+            <span class="chip">Data Visualization</span>
+            <span class="chip">Open Pedagogy</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-photo-frame">
+            <div id="about-sketch-container" aria-hidden="true"></div>
+            <div class="photo-placeholder">
+              <span>Photo</span>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat"><span class="stat-num">12+</span><span class="stat-label">Years Teaching</span></div>
+            <div class="stat"><span class="stat-num">8</span><span class="stat-label">Active Projects</span></div>
+            <div class="stat"><span class="stat-num">3</span><span class="stat-label">Departments</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching" class="section section-dark">
+    <div class="container">
+      <h2 class="section-heading section-heading-light">Teaching</h2>
+      <p class="section-subhead section-subhead-light">
+        "I learn to code so I can teach others; I teach literature so I remember why it matters."
+      </p>
+
+      <div class="courses-grid">
+
+        <div class="course-card">
+          <div class="course-meta">
+            <span class="course-tag">CS</span>
+            <span class="course-level">Intro</span>
+          </div>
+          <h3 class="course-title">Introduction to Creative Coding</h3>
+          <p class="course-desc">A first programming course for non-majors taught through visual art and interactive media using p5.js. No prior experience needed — just curiosity.</p>
+          <div class="course-footer">
+            <span class="course-sem">Fall 2025</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-meta">
+            <span class="course-tag">DH</span>
+            <span class="course-level">Upper</span>
+          </div>
+          <h3 class="course-title">Texts, Data, and Methods</h3>
+          <p class="course-desc">Computational approaches to literary and cultural texts. Topics include corpus building, topic modeling, sentiment analysis, and the ethics of algorithmic criticism.</p>
+          <div class="course-footer">
+            <span class="course-sem">Spring 2026</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-meta">
+            <span class="course-tag">ENG</span>
+            <span class="course-level">Upper</span>
+          </div>
+          <h3 class="course-title">Reading in the Age of Algorithms</h3>
+          <p class="course-desc">A seminar on what it means to read when machines read too. Combines literary theory with hands-on experiments in text classification and language models.</p>
+          <div class="course-footer">
+            <span class="course-sem">Fall 2025</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-meta">
+            <span class="course-tag">CS</span>
+            <span class="course-level">Mid</span>
+          </div>
+          <h3 class="course-title">Data Structures for Humanists</h3>
+          <p class="course-desc">Core data structures — graphs, trees, hash maps — taught through problems drawn from the humanities: genealogies, citation networks, thesauri.</p>
+          <div class="course-footer">
+            <span class="course-sem">Spring 2026</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-meta">
+            <span class="course-tag">DH</span>
+            <span class="course-level">Grad</span>
+          </div>
+          <h3 class="course-title">Digital Editions and Archives</h3>
+          <p class="course-desc">Theory and practice of building scholarly digital editions. Students work with TEI/XML encoding, IIIF images, and metadata standards to create publishable digital editions.</p>
+          <div class="course-footer">
+            <span class="course-sem">Fall 2025</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="course-meta">
+            <span class="course-tag">ENG</span>
+            <span class="course-level">Intro</span>
+          </div>
+          <h3 class="course-title">Writing with and Against AI</h3>
+          <p class="course-desc">A writing-intensive course that uses large language models as interlocutors, co-authors, and foils. What do machines reveal about human creativity?</p>
+          <div class="course-footer">
+            <span class="course-sem">Spring 2026</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-heading">Projects</h2>
+      <p class="section-subhead">Current and recent work at the intersection of computation and culture.</p>
+
+      <div class="projects-grid">
+
+        <article class="project-card" data-index="0">
+          <div class="project-thumb" data-index="0" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">The Midwest Novel Network</h3>
+            <p class="project-desc">A network analysis of character co-occurrence across 400 Midwestern novels, 1890–1960. Interactive visualization built with D3.js and a Python NLP pipeline.</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">D3.js</span>
+              <span class="tag">Network Analysis</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-index="1">
+          <div class="project-thumb" data-index="1" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">Sioux City Voices Archive</h3>
+            <p class="project-desc">A community digital archive of oral histories from Sioux City, Iowa, built in partnership with the public library. TEI-encoded transcripts with geospatial metadata.</p>
+            <div class="project-tags">
+              <span class="tag">TEI/XML</span>
+              <span class="tag">Oral History</span>
+              <span class="tag">Archival</span>
+              <span class="tag">Leaflet.js</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-index="2">
+          <div class="project-thumb" data-index="2" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">Sentiment Across Centuries</h3>
+            <p class="project-desc">Longitudinal sentiment analysis of American poetry anthologies, tracking emotional valence and topic drift from 1800 to 2000 using fine-tuned transformer models.</p>
+            <div class="project-tags">
+              <span class="tag">BERT</span>
+              <span class="tag">Sentiment</span>
+              <span class="tag">Poetry</span>
+              <span class="tag">HuggingFace</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-index="3">
+          <div class="project-thumb" data-index="3" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">Open Syllabus Visualizer</h3>
+            <p class="project-desc">A tool for visualizing curriculum data from the Open Syllabus Project, revealing canonical and under-taught texts in liberal arts education nationwide.</p>
+            <div class="project-tags">
+              <span class="tag">React</span>
+              <span class="tag">Data Viz</span>
+              <span class="tag">Open Data</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-index="4">
+          <div class="project-thumb" data-index="4" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">GenreLens</h3>
+            <p class="project-desc">A browser extension that classifies the genre of any webpage text using a lightweight on-device ML model. Built as a teaching demonstration for my DH methods course.</p>
+            <div class="project-tags">
+              <span class="tag">TensorFlow.js</span>
+              <span class="tag">Browser Extension</span>
+              <span class="tag">Pedagogy</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card" data-index="5">
+          <div class="project-thumb" data-index="5" aria-hidden="true"></div>
+          <div class="project-body">
+            <h3 class="project-title">Letters to the Prairie</h3>
+            <p class="project-desc">A digital edition of 19th-century letters by settlers on the Iowa prairie, encoded in TEI with contextual annotations, maps, and a timeline interface.</p>
+            <div class="project-tags">
+              <span class="tag">TEI</span>
+              <span class="tag">Digital Edition</span>
+              <span class="tag">IIIF</span>
+              <span class="tag">Omeka</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-text">
+          <h2 class="section-heading section-heading-light">Get in Touch</h2>
+          <p class="contact-intro">
+            Questions about my courses, collaboration ideas, or just want to talk about digital humanities? I'd love to hear from you.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:smith@morningside.edu" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              smith@morningside.edu
+            </a>
+            <a href="https://github.com/" class="contact-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              GitHub
+            </a>
+            <a href="https://orcid.org/" class="contact-link" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.516.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.016-5.325 5.016h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 3.872-2.484 3.872-3.722 0-2.016-1.284-3.722-3.828-3.722h-2.341z"/></svg>
+              ORCID
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="contact-name">Name</label>
+              <input type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-email">Email</label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="contact-msg">Message</label>
+              <textarea id="contact-msg" name="message" rows="5" placeholder="Hello! I'm writing about…" required></textarea>
+            </div>
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn-gold" id="submit-btn">
+                Send Message
+              </button>
+              <div id="contact-burst-canvas" aria-hidden="true"></div>
+            </div>
+            <p class="form-note" id="form-success" hidden>Thanks! Message sent (demo — no server attached).</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <p class="footer-name">Dr. Jane Smith</p>
+      <p class="footer-inst">Morningside University &middot; Sioux City, Iowa</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">&copy; 2026. Built with curiosity and p5.js.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
